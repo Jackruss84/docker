@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: valoria-pdf-service
+    runtime: docker
+    plan: free
+    envVars:
+      - key: PDF_SECRET
+        generateValue: true
+    healthCheckPath: /health
+    autoDeploy: true
